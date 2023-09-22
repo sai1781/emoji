@@ -1,13 +1,116 @@
+/* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Oswald:wght@200;300&display=swap");
+
+:root {
+  --light: #d9d9d9;
+  --white: #fffcf2;
+  --blue: #284b63;
+  --light_pink: #caf0f8;
+  --green-blue: #3c6e71;
+  --grey: #353535;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light_pink);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Crimson Text", serif;
+}
+.description {
+  text-shadow: 0.5px 0.5px 0.5px var(--white);
+  font-weight: 700;
+}
+
+.container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.item {
+  background-color: var(--white);
+  display: inline-block;
+  width: 10rem;
+  text-align: center;
+  border-radius: 5px;
+  text-align: center;
+  align-self: stretch;
+  padding: 0px 0.2rem;
+  transition: all 0.5s linear;
+  border: 1px solid rgb(19, 19, 19);
+}
+.item:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 1.3rem;
+  box-shadow: 11px 8px 7px rgb(120, 120, 120);
+}
+
+.item:hover .emoji {
+  transform: rotateY(360deg);
+  transform-style: preserve-3d;
+}
+.emoji {
+  font-size: 200%;
+  transition: transform.7s ease-in-out;
+  /* font-weight: bolder; */
+  padding-bottom: 0.7rem;
+}
+
+.nav {
+  padding: 0px 1rem;
+  background-color: white;
+  height: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 6px 10px rgba(51, 51, 51, 0.4);
+  border-bottom: 1px solid #80ed99;
+}
+
+.nav > h2 {
+  display: inline-block;
+}
+.nav > a {
+  float: right;
+  padding-top: 8px;
+}
+.search {
+  text-align: center;
+  margin: 1rem;
+}
+
+.copied,
+.copied:hover {
+  background-color: #9bf07f;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+input {
+  height: 1.5rem;
+  border-radius: 5px;
+  width: 30%;
+  margin-bottom: 1rem;
+  margin: 1rem;
+}
+.no-result {
+  color: #8e3636;
+  font-size: 4rem;
 }
